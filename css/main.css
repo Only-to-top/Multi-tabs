@@ -1,0 +1,60 @@
+.wrap-myvertical-tabs {
+  max-width: 100%;
+}
+
+.myvertical-tabs1,
+.myvertical-tabs2 {
+  list-style: none;
+  background: #FFF;
+  padding: 0;
+  margin: 0 0 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myvertical-tabs1 .number,
+.myvertical-tabs2 .number {
+  font-size: 73px;
+  color: #05b880;
+  font-weight: bold;
+  margin-right: 20px;
+  font-style: italic;
+}
+
+.myvertical-tabs1 .name-tabs,
+.myvertical-tabs2 .name-tabs {
+  font-size: 18px;
+  color: #333;
+  margin-right: 70px;
+}
+
+.myvertical-tabs1 li,
+.myvertical-tabs2 li {
+  padding: 10px 15px;
+  color: #333;
+  cursor: pointer;
+  border: 2px solid #05b880;
+  margin-right: 30px;
+  border-radius: 7px;
+}
+
+.myvertical-tabs1 li:hover, .myvertical-tabs1 li.chosen,
+.myvertical-tabs2 li:hover,
+.myvertical-tabs2 li.chosen {
+  background: #05b880;
+  color: #fff;
+}
+
+.myvertical-tabs-content {
+  display: none;
+  padding: 10px 15px;
+  margin-left: -1px;
+}
+
+.myvertical-tabs-content.active {
+  display: block;
+}
