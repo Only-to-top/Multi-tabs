@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gorizontal Tabs</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="wrap-myvertical-tabs">
+ 
+    <ul class="myvertical-tabs1">
+      <span class="number">1</span><span class="name-tabs">Какое у вас образование?</span>
+      <li class="education1 chosen">Среднее медицинское</li>
+      <li class="education2">Высшее медицинское</li>
+    </ul>
+
+    <ul class="myvertical-tabs2">
+      <span class="number">2</span><span class="name-tabs">Какой тип курса Вам нужен?</span>
+      <li class="type1 chosen">Повышение квалификации</li>
+      <li class="type2">Профессиональная переподготовка</li>
+    </ul>
+  
+    <div class="myvertical-tabs-content-wrap">
+      <div class="myvertical-tabs-content1 myvertical-tabs-content active">Повышение квалификации - Среднее образование</div>
+      <div class="myvertical-tabs-content2 myvertical-tabs-content">Повышение квалификации - Высшее образование</div>
+      <div class="myvertical-tabs-content3 myvertical-tabs-content">Профессиональная переподготовка - Среднее образование</div>
+      <div class="myvertical-tabs-content4 myvertical-tabs-content">Профессиональная переподготовка - Высшее образование</div>
+    </div>
+  
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function() {
+
+      // Первая строка табов
+      $('.myvertical-tabs1 li').click(function(){
+        $('.myvertical-tabs-content').removeClass('active');
+        $('.myvertical-tabs1 li').removeClass('chosen');
+        $(this).addClass('chosen');
+      });
+
+      // Вторая строка табов
+      $('.myvertical-tabs2 li').click(function(){
+        $('.myvertical-tabs-content').removeClass('active');
+        $('.myvertical-tabs2 li').removeClass('chosen');
+        $(this).addClass('chosen');
+      });
+
+      // Проверка первого таба
+      $('.education1').click(function(){
+        if ( $('.type1').hasClass('chosen') ) {
+          $('.myvertical-tabs-content1').addClass('active');
+        }
+        if ( $('.type2').hasClass('chosen') ) {
+          $('.myvertical-tabs-content3').addClass('active');
+        }
+      });
+
+      // Проверка второго таба
+      $('.education2').click(function(){
+        if ( $('.type1').hasClass('chosen') ) {
+          $('.myvertical-tabs-content2').addClass('active');
+        }
+        if ( $('.type2').hasClass('chosen') ) {
+          $('.myvertical-tabs-content4').addClass('active');
+        }
+      });
+
+      // Проверка третьего таба
+      $('.type1').click(function(){
+        if ( $('.education1').hasClass('chosen') ) {
+          $('.myvertical-tabs-content1').addClass('active');
+        }
+        if ( $('.education2').hasClass('chosen') ) {
+          $('.myvertical-tabs-content2').addClass('active');
+        }
+      });
+
+      // Проверка четвертого таба
+      $('.type2').click(function(){
+        if ( $('.education1').hasClass('chosen') ) {
+          $('.myvertical-tabs-content3').addClass('active');
+        }
+        if ( $('.education2').hasClass('chosen') ) {
+          $('.myvertical-tabs-content4').addClass('active');
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
